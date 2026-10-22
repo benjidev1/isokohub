@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IsokoHub | Your Marketplace, Your Choice</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f7f6;
+      color: #172b25;
+    }
+
+    header {
+      background: #063d32;
+      color: white;
+      padding: 18px 5%;
+    }
+
+    .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    .logo span {
+      color: #ffd166;
+    }
+
+    .account button {
+      background: white;
+      color: #063d32;
+      border: none;
+      padding: 10px 13px;
+      border-radius: 7px;
+      font-weight: bold;
+      cursor: pointer;
+      margin: 3px;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #063d32, #087e62);
+      color: white;
+      padding: 45px 5%;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 34px;
+      margin-bottom: 12px;
+    }
+
+    .hero p {
+      margin-bottom: 22px;
+      line-height: 1.6;
+    }
+
+    .search {
+      display: flex;
+      max-width: 550px;
+      margin: auto;
+      gap: 8px;
+    }
+
+    .search input {
+      flex: 1;
+      min-width: 0;
+      padding: 13px;
+      border: none;
+      border-radius: 7px;
+      font-size: 16px;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    .search button,
+    .primary {
+      background: #ffd166;
+      color: #173c31;
+      border: none;
+      border-radius: 7px;
+      padding: 12px 17px;
+      font-weight: bold;
+    }
+
+    .container {
+      padding: 30px 5%;
+    }
+
+    h2 {
+      margin-bottom: 18px;
+      font-size: 24px;
+    }
+
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+
+    .category {
+      background: white;
+      border-radius: 10px;
+      padding: 18px 5px;
+      text-align: center;
+      box-shadow: 0 2px 8px #0000000a;
+      cursor: pointer;
+    }
+
+    .category div {
+      font-size: 27px;
+      margin-bottom: 8px;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 15px;
+    }
+
+    .product {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 3px 12px #0000000d;
+    }
+
+    .product img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      background: #e5ece8;
+    }
+
+    .product-info {
+      padding: 13px;
+    }
+
+    .product h3 {
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+
+    .price {
+      color: #087e62;
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
+
+    .product button {
+      width: 100%;
+      background: #087e62;
+      color: white;
+      border: none;
+      padding: 11px;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+
+    .seller {
+      margin: 10px 5% 30px;
+      background: #e1f3e9;
+      padding: 25px;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .seller p {
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    .seller button {
+      background: #063d32;
+      color: white;
+      border: none;
+      padding: 13px 20px;
+      border-radius: 7px;
+      font-weight: bold;
+    }
+
+    .benefits {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+
+    .benefit {
+      background: white;
+      padding: 18px;
+      border-radius: 9px;
+      text-align: center;
+      line-height: 1.5;
+    }
+
+    .payments {
+      text-align: center;
+      background: white;
+      padding: 25px 5%;
+      line-height: 2;
+    }
+
+    .payment-label {
+      display: inline-block;
+      margin: 4px;
+      padding: 6px 10px;
+      background: #edf5f1;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #063d32;
+      color: white;
+      padding: 25px 5%;
+      text-align: center;
+      line-height: 1.9;
+    }
+
+    footer a {
+      color: #ffd166;
+    }
+
+    .empty {
+      grid-column: 1 / -1;
+      padding: 20px;
+      text-align: center;
+    }
+
+    @media (min-width: 700px) {
+      .products {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+
+      .categories {
+        grid-template-columns: repeat(6, 1fr);
+      }
+
+      .hero h1 {
+        font-size: 45px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="top">
+      <div class="logo">Isoko<span>Hub</span></div>
+
+      <div class="account">
+        <button onclick="showNotice('Customer accounts are coming soon.')">
+          Sign In
+        </button>
+
+        <button onclick="showNotice('Customer registration is coming soon.')">
+          Register
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>Your Marketplace, Your Choice</h1>
+
+    <p>
+      Discover great products from sellers across Rwanda.
+      Shop simply, shop smart.
+    </p>
+
+    <div class="search">
+      <input
+        id="searchInput"
+        type="search"
+        placeholder="Search for products..."
+        aria-label="Search products"
+      >
+
+      <button onclick="searchProducts()">Search</button>
+    </div>
+  </section>
+
+  <main>
+    <section class="container">
+      <h2>Shop by Category</h2>
+
+      <div class="categories">
+        <div class="category" onclick="filterCategory('Electronics')">
+          <div>📱</div>
+          Electronics
+        </div>
+
+        <div class="category" onclick="filterCategory('Fashion')">
+          <div>👕</div>
+          Fashion
+        </div>
+
+        <div class="category" onclick="filterCategory('Home')">
+          <div>🏠</div>
+          Home
+        </div>
+
+        <div class="category" onclick="filterCategory('Beauty')">
+          <div>💄</div>
+          Beauty
+        </div>
+
+        <div class="category" onclick="filterCategory('Food')">
+          <div>🍎</div>
+          Food
+        </div>
+
+        <div class="category" onclick="filterCategory('All')">
+          <div>🛍️</div>
+          All Items
+        </div>
+      </div>
+
+      <h2 id="productHeading">Featured Products</h2>
+
+      <div class="products" id="products">
+
+        <article class="product" data-category="Electronics">
+          <img
+            src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=80"
+            alt="Headphones"
+          >
+
+          <div class="product-info">
+            <h3>Wireless Headphones</h3>
+            <p class="price">RWF 15,000</p>
+            <button onclick="addToCart('Wireless Headphones', 15000)">
+              Add to Cart
+            </button>
+          </div>
+        </article>
+
+        <article class="product" data-category="Fashion">
+          <img
+            src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&q=80"
+            alt="T-shirt"
+          >
+
+          <div class="product-info">
+            <h3>Classic T-Shirt</h3>
+            <p class="price">RWF 8,000</p>
+            <button onclick="addToCart('Classic T-Shirt', 8000)">
+              Add to Cart
+            </button>
+          </div>
+        </article>
+
+        <article class="product" data-category="Home">
+          <img
+            src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=600&q=80"
+            alt="Home lamp"
+          >
+
+          <div class="product-info">
+            <h3>Modern Table Lamp</h3>
+            <p class="price">RWF 12,000</p>
+            <button onclick="addToCart('Modern Table Lamp', 12000)">
+              Add to Cart
+            </button>
+          </div>
+        </article>
+
+        <article class="product" data-category="Beauty">
+          <img
+            src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&w=600&q=80"
+            alt="Beauty products"
+          >
+
+          <div class="product-info">
+            <h3>Beauty Essentials</h3>
+            <p class="price">RWF 10,000</p>
+            <button onclick="addToCart('Beauty Essentials', 10000)">
+              Add to Cart
+            </button>
+          </div>
+        </article>
+
+      </div>
+
+      <p id="cartCount" style="margin-top:20px;font-weight:bold;">
+        🛒 Your cart: 0 items
+      </p>
+
+      <button class="primary" style="margin-top:12px;"
+        onclick="checkout()">
+        Proceed to Checkout
+      </button>
+    </section>
+
+    <section class="seller">
+      <h2>Become an IsokoHub Seller</h2>
+
+      <p>
+        Have products to sell? Join our marketplace and connect
+        with customers. Seller registration and product listing
+        will be available when the secure seller system is added.
+      </p>
+
+      <button onclick="showNotice(
+        'Seller registration is coming soon. Real seller accounts require a secure backend.'
+      )">
+        Start Selling
+      </button>
+    </section>
+
+    <section class="container">
+      <h2>Why Choose IsokoHub?</h2>
+
+      <div class="benefits">
+        <div class="benefit">
+          <h3>🛍️ More Choice</h3>
+          <p>Discover products from different sellers.</p>
+        </div>
+
+        <div class="benefit">
+          <h3>📱 Easy Shopping</h3>
+          <p>Shop using your phone or computer.</p>
+        </div>
+
+        <div class="benefit">
+          <h3>🏪 Sell Online</h3>
+          <p>Give your business a place to grow.</p>
+        </div>
+
+        <div class="benefit">
+          <h3>🔒 Safer Checkout</h3>
+          <p>Secure payment integration is planned.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="payments">
+      <h2>Payment Methods Planned</h2>
+
+      <p>
+        <span class="payment-label">MTN MoMo</span>
+        <span class="payment-label">Airtel Money</span>
+        <span class="payment-label">Visa</span>
+        <span class="payment-label">Mastercard</span>
+      </p>
+
+      <p>
+        Real payments will only work after a supported payment
+        provider is connected and configured.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <h2>IsokoHub</h2>
+
+    <p>Your Marketplace, Your Choice.</p>
+    <p>Kigali, Rwanda</p>
+    <p>Phone: 0790905708</p>
+    <p>Email: isokohub1@gmail.com</p>
+
+    <p>
+      &copy; <span id="year"></span> IsokoHub.
+      All rights reserved.
+    </p>
+  </footer>
+
+  <script>
+    let cart = [];
+
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+    function showNotice(message) {
+      alert(message);
+    }
+
+    function addToCart(name, price) {
+      cart.push({ name: name, price: price });
+      updateCart();
+      alert(name + " added to your cart!");
+    }
+
+    function updateCart() {
+      const total = cart.reduce(function(sum, item) {
+        return sum + item.price;
+      }, 0);
+
+      document.getElementById("cartCount").textContent =
+        "🛒 Your cart: " + cart.length +
+        " items | Total: RWF " + total.toLocaleString();
+    }
+
+    function checkout() {
+      if (cart.length === 0) {
+        alert("Your cart is empty. Add a product first.");
+        return;
+      }
+
+      const total = cart.reduce(function(sum, item) {
+        return sum + item.price;
+      }, 0);
+
+      alert(
+        "Your order total is RWF " + total.toLocaleString() +
+        ". Real checkout and payment processing have not been connected yet."
+      );
+    }
+
+    function searchProducts() {
+      const query = document.getElementById("searchInput")
+        .value.trim().toLowerCase();
+
+      const products = document.querySelectorAll(".product");
+      let found = 0;
+
+      products.forEach(function(product) {
+        const matches = product.textContent.toLowerCase()
+          .includes(query);
+
+        product.style.display = matches ? "" : "none";
+
+        if (matches) found++;
+      });
+
+      document.getElementById("productHeading").textContent =
+        query ? "Search Results" : "Featured Products";
+
+      if (query && found === 0) {
+        alert("No matching products found.");
+      }
+    }
+
+    function filterCategory(category) {
+      const products = document.querySelectorAll(".product");
+
+      products.forEach(function(product) {
+        const matches =
+          category === "All" ||
+          product.dataset.category === category;
+
+        product.style.display = matches ? "" : "none";
+      });
+
+      document.getElementById("productHeading").textContent =
+        category === "All" ? "All Products" : category + " Products";
+
+      document.getElementById("searchInput").value = "";
+    }
+  </script>
+
+</body>
+</html>
