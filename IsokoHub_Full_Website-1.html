@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0f766e">
+  <title>IsokoHub — Shop Rwanda</title>
+  <meta name="description" content="Shop and discover products on IsokoHub, your online marketplace in Rwanda.">
+  <style>
+    :root{--green:#0f766e;--green-dark:#115e59;--ink:#17212b;--muted:#64748b;--paper:#f5f7f8;--line:#e2e8f0;--white:#fff;--orange:#f59e0b;--danger:#b91c1c}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--paper);color:var(--ink)}button,input,select,textarea{font:inherit}button{cursor:pointer}.topbar{background:#083f3b;color:#eafffb;text-align:center;padding:8px 12px;font-size:13px}.header{background:#fff;position:sticky;top:0;z-index:20;border-bottom:1px solid var(--line)}.head-inner{max-width:1200px;margin:auto;padding:14px 18px;display:flex;gap:14px;align-items:center;flex-wrap:wrap}.brand{font-weight:900;font-size:25px;letter-spacing:-1px;color:var(--green);text-decoration:none;white-space:nowrap}.brand span{color:var(--orange)}.search{flex:1;min-width:190px;display:flex}.search input{width:100%;border:1px solid #cbd5e1;border-right:0;border-radius:9px 0 0 9px;padding:12px;outline-color:var(--green)}.search button{border:0;background:var(--green);color:#fff;padding:0 16px;border-radius:0 9px 9px 0;font-weight:700}.head-actions{display:flex;gap:8px;align-items:center}.btn{border:0;border-radius:9px;padding:11px 14px;font-weight:700;display:inline-flex;justify-content:center;align-items:center;gap:6px}.btn-primary{background:var(--green);color:#fff}.btn-primary:hover{background:var(--green-dark)}.btn-light{background:#ecfdf5;color:var(--green-dark);border:1px solid #a7f3d0}.btn-outline{background:#fff;border:1px solid var(--line);color:var(--ink)}.btn-danger{background:#fee2e2;color:#991b1b}.hero{background:linear-gradient(120deg,#064e3b,#0f766e 58%,#14b8a6);color:white;padding:48px 20px}.hero-inner{max-width:1200px;margin:auto;display:grid;grid-template-columns:1.5fr 1fr;align-items:center;gap:25px}.hero h1{font-size:clamp(30px,5vw,52px);line-height:1.05;margin:0 0 14px}.hero p{font-size:17px;line-height:1.6;max-width:650px;color:#d1fae5}.hero .btn{margin-top:8px;background:#fff;color:#065f46}.hero-card{background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.25);padding:22px;border-radius:18px;backdrop-filter:blur(5px)}.hero-card strong{font-size:20px}.hero-card p{font-size:14px;margin-bottom:0}.trust-row{max-width:1200px;margin:18px auto 0;padding:0 18px;display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.trust{background:#fff;border:1px solid var(--line);padding:14px;border-radius:12px;font-size:13px;color:#334155}.trust b{display:block;font-size:15px;margin-bottom:5px}.section{max-width:1200px;margin:32px auto;padding:0 18px}.section-head{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:16px}.section h2{margin:0;font-size:25px}.muted{color:var(--muted)}.categories{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 18px}.cat-btn{background:#fff;border:1px solid var(--line);border-radius:999px;padding:9px 14px;color:#334155}.cat-btn.active{background:#d1fae5;border-color:#6ee7b7;color:#065f46;font-weight:700}.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}.product{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;min-width:0;transition:transform .15s,box-shadow .15s}.product:hover{transform:translateY(-2px);box-shadow:0 8px 24px #0f172a0d}.product img{width:100%;height:190px;object-fit:cover;background:#e2e8f0}.product-body{padding:13px;display:flex;flex-direction:column;gap:8px;flex:1}.badge{font-size:11px;background:#ecfdf5;color:#047857;border-radius:999px;padding:5px 8px;align-self:flex-start;font-weight:700}.product h3{font-size:16px;margin:0;line-height:1.3}.product-desc{font-size:13px;line-height:1.4;color:var(--muted);margin:0;min-height:35px}.price{font-weight:900;font-size:19px;color:#065f46}.product-actions{display:flex;gap:8px;margin-top:auto}.product-actions .btn{flex:1;padding:10px 8px;font-size:13px}.empty{background:#fff;border:1px dashed #cbd5e1;padding:35px;text-align:center;border-radius:14px;color:var(--muted);grid-column:1/-1}.panel{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px}.seller-layout{display:grid;grid-template-columns:1fr 1fr;gap:18px}.field{display:flex;flex-direction:column;gap:6px;margin-bottom:13px}.field label{font-weight:700;font-size:13px}.field input,.field select,.field textarea{border:1px solid #cbd5e1;border-radius:8px;padding:11px;width:100%;background:#fff}.field textarea{min-height:80px;resize:vertical}.notice{background:#fffbeb;border:1px solid #fde68a;color:#92400e;border-radius:10px;padding:12px;font-size:13px;line-height:1.5}.footer{background:#102a2a;color:#dbeafe;margin-top:42px;padding:32px 18px}.footer-inner{max-width:1200px;margin:auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:25px}.footer h3,.footer h4{color:#fff;margin-top:0}.footer a{color:#a7f3d0;text-decoration:none}.footer p{line-height:1.6;font-size:14px}.footer-bottom{max-width:1200px;margin:20px auto 0;border-top:1px solid #ffffff26;padding-top:16px;font-size:12px;color:#cbd5e1}.modal{display:none;position:fixed;inset:0;background:#0f172a99;z-index:50;align-items:center;justify-content:center;padding:16px}.modal.open{display:flex}.modal-card{width:min(540px,100%);max-height:90vh;overflow:auto;background:#fff;border-radius:16px;padding:22px;box-shadow:0 20px 60px #0003}.modal-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px}.modal-head h2{margin:0}.close{border:0;background:#f1f5f9;border-radius:50%;width:35px;height:35px;font-size:20px}.cart-list{display:flex;flex-direction:column;gap:10px}.cart-item{display:grid;grid-template-columns:64px 1fr auto;gap:12px;align-items:center;border-bottom:1px solid var(--line);padding:10px 0}.cart-item img{width:64px;height:64px;object-fit:cover;border-radius:8px}.qty{display:flex;align-items:center;gap:8px}.qty button{border:1px solid var(--line);background:#fff;border-radius:6px;width:27px;height:27px}.total-row{display:flex;justify-content:space-between;font-size:19px;font-weight:900;padding:16px 0}.small{font-size:12px;color:var(--muted);line-height:1.5}.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#102a2a;color:#fff;padding:12px 18px;border-radius:10px;z-index:100;display:none;max-width:90%;box-shadow:0 8px 30px #0003}.toast.show{display:block}.mobile-menu{display:none}
+    @media(max-width:900px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}.hero-inner{grid-template-columns:1fr 0.8fr}.trust-row{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:650px){.head-inner{gap:10px;padding:12px}.brand{font-size:23px}.search{order:3;flex-basis:100%}.head-actions{margin-left:auto}.head-actions .hide-mobile{display:none}.hero{padding:35px 18px}.hero-inner{grid-template-columns:1fr}.hero-card{display:none}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.product img{height:145px}.product-body{padding:10px}.product h3{font-size:14px}.product-desc{font-size:12px}.product-actions{flex-direction:column}.product-actions .btn{width:100%}.section{margin:25px auto}.seller-layout{grid-template-columns:1fr}.footer-inner{grid-template-columns:1fr}.trust{padding:11px}.trust b{font-size:13px}}
+    @media(max-width:360px){.grid{grid-template-columns:1fr}.product img{height:200px}.trust-row{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="topbar">🇷🇼 Proudly serving Rwanda · Shop local, sell local</div>
+  <header class="header">
+    <div class="head-inner">
+      <a class="brand" href="#" aria-label="IsokoHub home">Isoko<span>Hub</span></a>
+      <form class="search" id="searchForm" role="search">
+        <input id="searchInput" type="search" placeholder="Search products..." aria-label="Search products">
+        <button type="submit">Search</button>
+      </form>
+      <div class="head-actions">
+        <button class="btn btn-outline hide-mobile" onclick="scrollToSection('sell')">Sell on IsokoHub</button>
+        <button class="btn btn-light" onclick="openModal('accountModal')">Account</button>
+        <button class="btn btn-primary" onclick="openCart()">🛒 <span id="cartCount">0</span></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
+        <div>
+          <h1>Your marketplace.<br>One easy place.</h1>
+          <p>Discover great products from sellers in Rwanda. Browse, add to cart, and contact sellers to arrange your order.</p>
+          <a class="btn" href="#products">Explore products ↓</a>
+        </div>
+        <div class="hero-card">
+          <strong>Welcome to IsokoHub 🇷🇼</strong>
+          <p>Find everyday essentials, fashion, electronics, home items and more — all in one place.</p>
+          <p>✔ Simple shopping &nbsp; ✔ Local sellers &nbsp; ✔ Mobile-friendly</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="trust-row">
+      <div class="trust"><b>🛍️ Great finds</b>Explore products from local sellers.</div>
+      <div class="trust"><b>📱 Mobile friendly</b>Shop on your phone or computer.</div>
+      <div class="trust"><b>💳 Payment choices</b>MoMo, Airtel Money, Visa and Mastercard options.</div>
+      <div class="trust"><b>💬 Personal support</b>Contact us through WhatsApp or email.</div>
+    </div>
+
+    <section class="section" id="products">
+      <div class="section-head">
+        <div><h2>Featured products</h2><p class="muted" style="margin:6px 0 0">Explore what's available on IsokoHub.</p></div>
+        <span class="muted" id="productCount"></span>
+      </div>
+      <div class="categories" id="categories"></div>
+      <div class="grid" id="productGrid"></div>
+    </section>
+
+    <section class="section" id="sell">
+      <div class="section-head"><div><h2>Sell on IsokoHub</h2><p class="muted" style="margin:6px 0 0">Add a product listing to this demo website.</p></div></div>
+      <div class="seller-layout">
+        <div class="panel">
+          <h3 style="margin-top:0">List your product</h3>
+          <form id="productForm">
+            <div class="field"><label for="sellerName">Seller name</label><input id="sellerName" required placeholder="Your name or shop name"></div>
+            <div class="field"><label for="productName">Product name</label><input id="productName" required maxlength="80" placeholder="e.g. Leather handbag"></div>
+            <div class="field"><label for="productPrice">Price (RWF)</label><input id="productPrice" required type="number" min="1" step="1" placeholder="e.g. 25000"></div>
+            <div class="field"><label for="productCategory">Category</label><select id="productCategory" required><option value="">Choose category</option><option>Fashion</option><option>Electronics</option><option>Home</option><option>Beauty</option><option>Food</option><option>Other</option></select></div>
+            <div class="field"><label for="productImage">Product image URL (optional)</label><input id="productImage" type="url" placeholder="https://example.com/image.jpg"></div>
+            <div class="field"><label for="productDescription">Description</label><textarea id="productDescription" required maxlength="400" placeholder="Describe your product..."></textarea></div>
+            <button class="btn btn-primary" type="submit">Add product</button>
+          </form>
+          <p class="small">Demo limitation: listings are saved only in this browser. For public seller uploads visible to everyone, connect a database and image storage such as Firebase.</p>
+        </div>
+        <div class="panel">
+          <h3 style="margin-top:0">How selling works</h3>
+          <p>1. Add your product details and image URL.</p>
+          <p>2. Customers browse and add products to their cart.</p>
+          <p>3. When ready, customers can send an order summary through WhatsApp.</p>
+          <div class="notice"><b>Before launching:</b> review seller listings, set your delivery/returns rules, and connect a backend. Never publish private keys or passwords in this file.</div>
+          <p><a href="#contact" style="color:var(--green);font-weight:700">Need help? Contact IsokoHub support →</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="payments">
+      <div class="section-head"><div><h2>Payment options</h2><p class="muted" style="margin:6px 0 0">Payment methods planned for IsokoHub.</p></div></div>
+      <div class="grid">
+        <div class="panel"><h3>📱 MTN MoMo</h3><p class="muted">Mobile money payment option.</p></div>
+        <div class="panel"><h3>📱 Airtel Money</h3><p class="muted">Mobile money payment option.</p></div>
+        <div class="panel"><h3>💳 Visa</h3><p class="muted">Card payment option.</p></div>
+        <div class="panel"><h3>💳 Mastercard</h3><p class="muted">Card payment option.</p></div>
+      </div>
+      <p class="notice" style="margin-top:14px">Payments are <b>not processed by this starter file</b>. To accept real payments, integrate a payment provider that supports these methods in Rwanda, using its secure server-side checkout/API. Do not collect or store card numbers or PINs in this website.</p>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="section-head"><div><h2>Contact & support</h2><p class="muted" style="margin:6px 0 0">We're here to help with IsokoHub.</p></div></div>
+      <div class="panel">
+        <p><b>📞 Phone:</b> <a href="tel:+250790905708">0790905708</a></p>
+        <p><b>💬 WhatsApp:</b> <a href="https://wa.me/250790905708" target="_blank" rel="noopener">Chat with IsokoHub support</a></p>
+        <p><b>✉️ Email:</b> <a href="mailto:isokohub1@gmail.com">isokohub1@gmail.com</a></p>
+        <p><b>📍 Location:</b> Kigali, Rwanda</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div><h3>Isoko<span style="color:var(--orange)">Hub</span></h3><p>Your online marketplace for discovering and selling products in Rwanda.</p></div>
+      <div><h4>Quick links</h4><p><a href="#products">Shop products</a></p><p><a href="#sell">Sell on IsokoHub</a></p><p><a href="#payments">Payment options</a></p></div>
+      <div><h4>Support</h4><p><a href="https://wa.me/250790905708" target="_blank" rel="noopener">WhatsApp</a></p><p><a href="mailto:isokohub1@gmail.com">Email us</a></p><p>Kigali, Rwanda</p></div>
+    </div>
+    <div class="footer-bottom">© <span id="year"></span> IsokoHub. All rights reserved. Starter website — configure backend and payments before launch.</div>
+  </footer>
+
+  <div class="modal" id="cartModal" role="dialog" aria-modal="true" aria-labelledby="cartTitle">
+    <div class="modal-card">
+      <div class="modal-head"><h2 id="cartTitle">Your shopping cart</h2><button class="close" onclick="closeModal('cartModal')" aria-label="Close">×</button></div>
+      <div id="cartContents"></div>
+      <div class="total-row"><span>Total</span><span id="cartTotal">RWF 0</span></div>
+      <button class="btn btn-primary" style="width:100%" onclick="openCheckout()">Continue to checkout</button>
+      <p class="small">Checkout will prepare an order message for WhatsApp. No payment is taken by this demo.</p>
+    </div>
+  </div>
+
+  <div class="modal" id="checkoutModal" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle">
+    <div class="modal-card">
+      <div class="modal-head"><h2 id="checkoutTitle">Checkout</h2><button class="close" onclick="closeModal('checkoutModal')" aria-label="Close">×</button></div>
+      <form id="checkoutForm">
+        <div class="field"><label for="customerName">Your full name</label><input id="customerName" required autocomplete="name"></div>
+        <div class="field"><label for="customerPhone">Phone number</label><input id="customerPhone" required type="tel" autocomplete="tel" placeholder="+250..."></div>
+        <div class="field"><label for="deliveryAddress">Delivery location / address</label><textarea id="deliveryAddress" required placeholder="District, sector, street or delivery instructions"></textarea></div>
+        <div class="field"><label for="paymentMethod">Preferred payment method</label><select id="paymentMethod" required><option value="">Choose payment method</option><option>MTN MoMo</option><option>Airtel Money</option><option>Visa</option><option>Mastercard</option></select></div>
+        <div class="notice">This records your preferred method in the order message only. It does not charge you or verify payment. Do not enter a PIN or card details here.</div>
+        <button class="btn btn-primary" type="submit" style="width:100%;margin-top:14px">Send order via WhatsApp</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal" id="accountModal" role="dialog" aria-modal="true" aria-labelledby="accountTitle">
+    <div class="modal-card">
+      <div class="modal-head"><h2 id="accountTitle">IsokoHub account</h2><button class="close" onclick="closeModal('accountModal')" aria-label="Close">×</button></div>
+      <form id="accountForm">
+        <div class="field"><label for="accountName">Your name</label><input id="accountName" required autocomplete="name"></div>
+        <div class="field"><label for="accountEmail">Email address</label><input id="accountEmail" type="email" required autocomplete="email"></div>
+        <div class="field"><label for="accountPassword">Password (demo only)</label><input id="accountPassword" type="password" required minlength="6" autocomplete="current-password"></div>
+        <button class="btn btn-primary" type="submit" style="width:100%">Continue</button>
+      </form>
+      <p class="small">This is only a local demo and does not create a secure account. For real customer accounts, connect Firebase Authentication or another secure authentication service. Do not use a real password here.</p>
+      <div id="accountStatus" class="small"></div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status"></div>
+
+  <script>
+    const WHATSAPP_NUMBER = "250790905708";
+    const STORAGE_PRODUCTS = "isokohub_demo_products_v1";
+    const STORAGE_CART = "isokohub_demo_cart_v1";
+    const money = amount => "RWF " + Number(amount || 0).toLocaleString("en-US");
+    const fallbackImage = "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80";
+
+    const starterProducts = [
+      {id:"demo-1",name:"Classic Wristwatch",price:18000,category:"Fashion",seller:"IsokoHub Demo",description:"A stylish everyday watch for work and weekends.",image:"https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80"},
+      {id:"demo-2",name:"Wireless Headphones",price:25000,category:"Electronics",seller:"IsokoHub Demo",description:"Comfortable headphones for music and calls.",image:"https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80"},
+      {id:"demo-3",name:"Everyday Backpack",price:22000,category:"Fashion",seller:"IsokoHub Demo",description:"A practical bag for school, work, or travel.",image:"https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=80"},
+      {id:"demo-4",name:"Home Plant Pot",price:9000,category:"Home",seller:"IsokoHub Demo",description:"A simple decorative pot for your living space.",image:"https://images.unsplash.com/photo-1485955900006-10f4d324d411?auto=format&fit=crop&w=800&q=80"},
+      {id:"demo-5",name:"Skin Care Set",price:15000,category:"Beauty",seller:"IsokoHub Demo",description:"A sample listing for beauty and personal-care products.",image:"https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&w=800&q=80"},
+      {id:"demo-6",name:"Modern Table Lamp",price:28000,category:"Home",seller:"IsokoHub Demo",description:"A warm, modern lamp for your room or office.",image:"https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=800&q=80"},
+      {id:"demo-7",name:"Smartphone",price:145000,category:"Electronics",seller:"IsokoHub Demo",description:"Example product listing. Confirm details with seller.",image:"https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80"},
+      {id:"demo-8",name:"Casual Sneakers",price:32000,category:"Fashion",seller:"IsokoHub Demo",description:"Comfortable everyday shoes for casual wear.",image:"https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=80"}
+    ];
+    let products = loadProducts();
+    let cart = JSON.parse(localStorage.getItem(STORAGE_CART) || "[]");
+    let activeCategory = "All";
+    let query = "";
+
+    function loadProducts(){
+      try{
+        const saved = JSON.parse(localStorage.getItem(STORAGE_PRODUCTS) || "null");
+        return Array.isArray(saved) && saved.length ? saved : starterProducts.slice();
+      }catch(e){ return starterProducts.slice(); }
+    }
+    function saveProducts(){ localStorage.setItem(STORAGE_PRODUCTS, JSON.stringify(products)); }
+    function saveCart(){ localStorage.setItem(STORAGE_CART, JSON.stringify(cart)); }
+    function escapeHtml(value){return String(value ?? "").replace(/[&<>"']/g, c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
+    function safeImage(url){try{const u=new URL(url, location.href);return ["http:","https:"].includes(u.protocol)?u.href:fallbackImage;}catch(e){return fallbackImage;}}
+    function toast(message){const el=document.getElementById("toast");el.textContent=message;el.classList.add("show");setTimeout(()=>el.classList.remove("show"),2800);}
+    function renderCategories(){
+      const cats=["All",...new Set(products.map(p=>p.category).filter(Boolean))];
+      const container=document.getElementById("categories");
+      container.innerHTML=cats.map(cat=>`<button class="cat-btn ${activeCategory===cat?"active":""}" onclick="chooseCategory('${escapeHtml(cat)}')">${escapeHtml(cat)}</button>`).join("");
+    }
+    function chooseCategory(cat){activeCategory=cat;renderCategories();renderProducts();}
+    function renderProducts(){
+      const visible=products.filter(p=>{
+        const matchesCat=activeCategory==="All"||p.category===activeCategory;
+        const text=[p.name,p.description,p.category,p.seller].join(" ").toLowerCase();
+        return matchesCat && text.includes(query.toLowerCase());
+      });
+      document.getElementById("productCount").textContent=`${visible.length} product${visible.length===1?"":"s"}`;
+      const grid=document.getElementById("productGrid");
+      if(!visible.length){grid.innerHTML='<div class="empty">No products found. Try another search or category.</div>';return;}
+      grid.innerHTML=visible.map(p=>`
+        <article class="product">
+          <img src="${escapeHtml(safeImage(p.image||fallbackImage))}" alt="${escapeHtml(p.name)}" loading="lazy" onerror="this.onerror=null;this.src='${fallbackImage}'">
+          <div class="product-body">
+            <span class="badge">${escapeHtml(p.category||"Other")}</span>
+            <h3>${escapeHtml(p.name)}</h3>
+            <p class="product-desc">${escapeHtml(p.description||"Contact seller for more details.")}</p>
+            <div class="price">${money(p.price)}</div>
+            <div class="small">Seller: ${escapeHtml(p.seller||"IsokoHub seller")}</div>
+            <div class="product-actions">
+              <button class="btn btn-primary" onclick="addToCart('${escapeHtml(p.id)}')">Add to cart</button>
+              <button class="btn btn-outline" onclick="askSeller('${escapeHtml(p.id)}')">Ask seller</button>
+            </div>
+          </div>
+        </article>`).join("");
+    }
+    function addToCart(id){
+      const p=products.find(item=>item.id===id);if(!p)return;
+      const existing=cart.find(item=>item.id===id);
+      if(existing)existing.qty++;else cart.push({id:p.id,qty:1});
+      saveCart();updateCartCount();toast("Added to cart: "+p.name);
+    }
+    function updateCartCount(){document.getElementById("cartCount").textContent=cart.reduce((sum,item)=>sum+item.qty,0);}
+    function cartProducts(){return cart.map(item=>({item,p:products.find(p=>p.id===item.id)})).filter(x=>x.p);}
+    function openCart(){renderCart();openModal("cartModal");}
+    function renderCart(){
+      const list=cartProducts();const box=document.getElementById("cartContents");
+      if(!list.length){box.innerHTML='<div class="empty">Your cart is empty. Browse products to get started.</div>';document.getElementById("cartTotal").textContent=money(0);return;}
+      box.innerHTML='<div class="cart-list">'+list.map(({item,p})=>`
+        <div class="cart-item">
+          <img src="${escapeHtml(safeImage(p.image||fallbackImage))}" alt="">
+          <div><b>${escapeHtml(p.name)}</b><div class="small">${money(p.price)} each</div>
+            <div class="qty"><button onclick="changeQty('${escapeHtml(p.id)}',-1)" aria-label="Decrease quantity">−</button><span>${item.qty}</span><button onclick="changeQty('${escapeHtml(p.id)}',1)" aria-label="Increase quantity">+</button></div>
+          </div>
+          <b>${money(p.price*item.qty)}</b>
+        </div>`).join("")+'</div>';
+      document.getElementById("cartTotal").textContent=money(list.reduce((sum,{item,p})=>sum+p.price*item.qty,0));
+    }
+    function changeQty(id,delta){const item=cart.find(x=>x.id===id);if(!item)return;item.qty+=delta;if(item.qty<=0)cart=cart.filter(x=>x.id!==id);saveCart();updateCartCount();renderCart();}
+    function askSeller(id){
+      const p=products.find(x=>x.id===id);if(!p)return;
+      const msg=`Hello IsokoHub, I am interested in this product: ${p.name} (${money(p.price)}). Is it available?`;
+      window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`,"_blank","noopener");
+    }
+    function openCheckout(){
+      if(!cartProducts().length){toast("Your cart is empty.");return;}
+      closeModal("cartModal");openModal("checkoutModal");
+    }
+    function openModal(id){document.getElementById(id).classList.add("open");}
+    function closeModal(id){document.getElementById(id).classList.remove("open");}
+    function scrollToSection(id){document.getElementById(id).scrollIntoView({behavior:"smooth"});}
+
+    document.getElementById("searchForm").addEventListener("submit",e=>{e.preventDefault();query=document.getElementById("searchInput").value.trim();renderProducts();scrollToSection("products");});
+    document.getElementById("searchInput").addEventListener("input",e=>{query=e.target.value.trim();renderProducts();});
+    document.getElementById("productForm").addEventListener("submit",e=>{
+      e.preventDefault();
+      const name=document.getElementById("productName").value.trim();
+      const price=Number(document.getElementById("productPrice").value);
+      if(!name||!Number.isFinite(price)||price<=0){toast("Enter a product name and a valid price.");return;}
+      const p={id:"seller-"+Date.now(),name,price,category:document.getElementById("productCategory").value,seller:document.getElementById("sellerName").value.trim(),image:document.getElementById("productImage").value.trim()||fallbackImage,description:document.getElementById("productDescription").value.trim()};
+      products.unshift(p);saveProducts();activeCategory="All";renderCategories();renderProducts();e.target.reset();toast("Product added in this browser.");
+      scrollToSection("products");
+    });
+    document.getElementById("checkoutForm").addEventListener("submit",e=>{
+      e.preventDefault();
+      const list=cartProducts();if(!list.length){toast("Your cart is empty.");closeModal("checkoutModal");return;}
+      const name=document.getElementById("customerName").value.trim();
+      const phone=document.getElementById("customerPhone").value.trim();
+      const address=document.getElementById("deliveryAddress").value.trim();
+      const method=document.getElementById("paymentMethod").value;
+      const total=list.reduce((sum,{item,p})=>sum+p.price*item.qty,0);
+      const lines=list.map(({item,p})=>`- ${p.name} x${item.qty}: ${money(p.price*item.qty)}`).join("\n");
+      const message=`ISOKOHUB ORDER\nName: ${name}\nCustomer phone: ${phone}\nDelivery location: ${address}\nPreferred payment: ${method}\n\nItems:\n${lines}\n\nTOTAL: ${money(total)}\n\nPlease confirm availability, delivery fee, and payment instructions.`;
+      window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`,"_blank","noopener");
+      closeModal("checkoutModal");cart=[];saveCart();updateCartCount();e.target.reset();toast("Order message prepared. Confirm details with support.");
+    });
+    document.getElementById("accountForm").addEventListener("submit",e=>{
+      e.preventDefault();
+      const name=document.getElementById("accountName").value.trim();
+      document.getElementById("accountStatus").textContent=`Welcome, ${name}! This is a demo only; no secure account was created.`;
+      toast("Demo account form completed.");
+    });
+    document.querySelectorAll(".modal").forEach(modal=>modal.addEventListener("click",e=>{if(e.target===modal)modal.classList.remove("open");}));
+    document.addEventListener("keydown",e=>{if(e.key==="Escape")document.querySelectorAll(".modal.open").forEach(m=>m.classList.remove("open"));});
+    document.getElementById("year").textContent=new Date().getFullYear();
+    renderCategories();renderProducts();updateCartCount();
+  </script>
+</body>
+</html>
